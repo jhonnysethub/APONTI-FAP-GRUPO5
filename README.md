@@ -75,3 +75,39 @@ git push origin main
 ```
 
 ---
+## 💻 Exemplo Prático
+
+Imagine uma equipe desenvolvendo uma API em **Java + Spring Boot**.
+
+Depois de terminar uma nova funcionalidade, um dos desenvolvedores executa:
+
+```bash
+git add .
+git commit -m "feat: adiciona autenticação JWT"
+git push origin feature/login
+```
+
+Assim que o **git push** é enviado, o GitHub Actions pode iniciar automaticamente uma série de verificações.
+
+Entre elas:
+
+* Compilar o projeto;
+* Executar os testes;
+* Verificar a qualidade do código.
+
+Se algum teste falhar, o desenvolvedor recebe essa informação e pode corrigir o problema antes que o código seja integrado ao projeto principal.
+
+---
+
+## 🌍 Alguns exemplos de uso
+
+Hoje em dia muitas empresas utilizam o GitHub Actions para automatizar tarefas como:
+
+* 🚀 Fazer deploy de aplicações;
+* 🧪 Executar testes automaticamente;
+* 🔍 Verificar a qualidade do código;
+* 📦 Criar novas versões do sistema;
+* 📚 Gerar documentação;
+* 📢 Enviar notificações quando algum processo falha.
+
+---
