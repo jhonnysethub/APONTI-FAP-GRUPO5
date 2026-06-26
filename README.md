@@ -111,3 +111,25 @@ Hoje em dia muitas empresas utilizam o GitHub Actions para automatizar tarefas c
 * 📢 Enviar notificações quando algum processo falha.
 
 ---
+
+## Benefícios do GitHub Actions
+
+O GitHub Actions oferece diversas vantagens para equipes de desenvolvimento, principalmente por automatizar tarefas repetitivas e reduzir erros durante o desenvolvimento.
+
+### Principais benefícios
+
+- **Automação de tarefas:** elimina a necessidade de executar manualmente processos como testes, compilação e deploy.
+
+- **Maior qualidade do código:** executa testes automaticamente sempre que uma alteração é enviada ao repositório, ajudando a identificar problemas rapidamente.
+
+- **Mais produtividade:** os desenvolvedores podem focar na implementação de novas funcionalidades enquanto tarefas repetitivas são executadas automaticamente.
+
+- **Melhor colaboração:** como todas as alterações passam pelas mesmas validações, o trabalho em equipe se torna mais organizado e confiável.
+
+-  **Entrega mais rápida:** automatiza o processo de integração e entrega da aplicação, reduzindo o tempo entre o desenvolvimento e a publicação.
+
+- **Feedback imediato:** caso algum teste ou validação falhe, o GitHub informa rapidamente o erro, facilitando a correção.
+
+- **Integração nativa com o GitHub:** não é necessário utilizar ferramentas externas para criar pipelines de automação.
+
+- **Suporte a diversas tecnologias:** funciona com diferentes linguagens de programação e frameworks, como Java, Python, JavaScript, C#, PHP, Go, entre outros.
