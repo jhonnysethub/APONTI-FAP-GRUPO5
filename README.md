@@ -167,20 +167,22 @@ Depois disso entram em ação os **jobs**. Podemos imaginar cada job como um **b
 
 Cada **job** é dividido em várias **steps** (etapas), que funcionam como pequenas instruções executadas em sequência. Observe como isso acontece na imagem:
 
+Cada **job** é dividido em várias **steps** (etapas), que funcionam como pequenas instruções executadas em sequência. Observe como isso acontece na imagem:
+
 ```text
-Job 1
-├── 📥 Baixar o código
-├── 📦 Instalar dependências
-└── 🧪 Executar testes
-          │
-          ▼
-   Tudo certo?
-          │
-         Sim
-          ▼
-Job 2
-├── 🏗️ Construir a aplicação (Build)
-└── 🚀 Publicar a aplicação (Deploy)
+Workflow
+   │
+   ├── Job 1
+   │     ├── 📥 Baixar o código
+   │     ├── 📦 Instalar dependências
+   │     └── 🧪 Executar testes
+   │
+   └── Job 2
+         ├── 🏗️ Build
+         └── 🚀 Deploy
+```
+
+Perceba que cada **job** possui uma responsabilidade diferente. O primeiro prepara e verifica o projeto, enquanto o segundo constrói a aplicação (*build*) e, quando configurado, realiza sua publicação (*deploy*). Assim, o workflow fica organizado em blocos de trabalho menores, tornando o processo mais fácil de entender, manter e expandir conforme o projeto evolui.
 
 É importante destacar que essa organização pode variar de acordo com o projeto. Alguns workflows possuem apenas um job com poucas etapas, enquanto outros são divididos em vários blocos de trabalho para automatizar processos mais complexos.
 
