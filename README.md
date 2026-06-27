@@ -40,40 +40,17 @@ Isso torna o processo muito mais rápido e reduz bastante a necessidade de taref
 ---
 ## ⚙️ Como o GitHub Actions funciona?
 
-Um fluxo simples pode ser representado assim:
+O fluxo abaixo representa de forma simplificada como o GitHub Actions executa automaticamente tarefas durante o desenvolvimento.
 
-```text
-Desenvolvedor
-      │
-      ▼
- git add .
-      │
-      ▼
-git commit -m "feat: adiciona login"
-      │
-      ▼
-git push origin main
-      │
-      ▼
- GitHub recebe o código
-      │
-      ▼
- GitHub Actions inicia automaticamente
-      │
-      ▼
- Compila o projeto
-      │
-      ▼
- Executa os testes
-      │
-      ▼
- Verifica se tudo passou
-      │
-      ▼
- ✅ Tudo certo → Continua
- ❌ Algum erro → Processo interrompido
-```
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ae990ec0-e635-49fa-be08-b04348223b00" alt="Fluxo GitHub Actions" width="700">
+</p>
 
+<p align="center">
+  <em>Figura 1 – Fluxo simplificado do funcionamento do GitHub Actions.</em>
+</p>
+
+Após um git push, o GitHub identifica que existe um workflow configurado e inicia automaticamente todas as etapas necessárias.
 ---
 ## 💻 Exemplo Prático
 
