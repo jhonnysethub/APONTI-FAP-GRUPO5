@@ -149,7 +149,55 @@ O GitHub Actions oferece diversas vantagens para equipes de desenvolvimento, pri
 
 ## 🚀 Funcionalidades do Workflow
 
-_(integrante 3)_
+Depois que o GitHub Actions é configurado, o **workflow** passa a ser responsável por executar automaticamente as tarefas definidas para o projeto. Podemos imaginá-lo como um roteiro de execução: em vez de uma pessoa precisar lembrar e realizar cada etapa manualmente, o GitHub segue uma sequência de instruções previamente organizada pelos desenvolvedores.
+
+Esse processo sempre começa quando acontece um **evento de gatilho** (*trigger*). Um evento nada mais é do que uma ação realizada dentro do repositório que informa ao GitHub que chegou o momento de iniciar a automação. Entre os exemplos mais comuns estão o envio de código (*push*), a abertura de um *Pull Request* ou a criação de uma nova versão do projeto.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aea1ef17-fc88-4821-b68b-6d58073670e2" alt="Fluxograma de um Workflow" width="700" >
+</p>
+
+<p align="center">
+  <em>Figura 2 – Organização de um workflow no GitHub Actions.</em>
+</p>
+
+A imagem acima ilustra esse funcionamento. Observe que o processo acontece de cima para baixo. Primeiro ocorre o **evento de gatilho**, representado pelo envio de código (*push*). Em seguida, o GitHub localiza o **workflow**, que é um arquivo escrito em **YAML** onde os desenvolvedores descrevem todas as tarefas que deverão ser executadas e a ordem em que elas acontecerão.
+
+Depois disso entram em ação os **jobs**. Podemos imaginar cada job como um **bloco de trabalho**, responsável por uma parte específica da automação. Em vez de concentrar todas as tarefas em um único lugar, o workflow pode ser dividido em diferentes jobs para deixar o processo mais organizado e facilitar sua manutenção.
+
+Cada **job** é dividido em várias **steps** (etapas), que funcionam como pequenas instruções executadas em sequência. Observe como isso acontece na imagem:
+
+```text
+Workflow
+   │
+   ├── Job 1
+   │     ├── 📥 Baixar o código
+   │     ├── 📦 Instalar dependências
+   │     └── 🧪 Executar testes
+   │
+   └── Job 2
+         ├── 🏗️ Build
+         └── 🚀 Deploy
+```
+
+Perceba que cada **job** possui uma responsabilidade diferente. O primeiro prepara e verifica o projeto, enquanto o segundo constrói a aplicação (*build*) e, quando configurado, realiza sua publicação (*deploy*). Assim, o workflow fica organizado em blocos de trabalho menores, tornando o processo mais fácil de entender, manter e expandir conforme o projeto evolui.
+
+É importante destacar que essa organização pode variar de acordo com o projeto. Alguns workflows possuem apenas um job com poucas etapas, enquanto outros são divididos em vários blocos de trabalho para automatizar processos mais complexos.
+
+Embora cada projeto tenha necessidades diferentes, algumas tarefas aparecem com frequência na maioria dos workflows, como:
+
+| Etapa                        | Finalidade                                                                 |
+| :--------------------------- | :------------------------------------------------------------------------- |
+| 📥 **Baixar o código**       | Obtém a versão mais recente do projeto para iniciar a execução.            |
+| 📦 **Instalar dependências** | Prepara o ambiente com tudo o que a aplicação precisa para funcionar.      |
+| 🧪 **Executar testes**       | Verifica se as funcionalidades continuam funcionando corretamente.         |
+| 🔍 **Analisar o código**     | Confere se o projeto segue os padrões definidos pela equipe.               |
+| 🚀 **Publicar a aplicação**  | Disponibiliza uma nova versão do sistema, quando essa etapa é configurada. |
+
+Assim como acontece ao seguir uma receita de bolo, não faz sentido decorar o bolo antes de assá-lo. Da mesma forma, um workflow executa suas etapas em ordem, garantindo que cada uma seja concluída antes da próxima começar.
+
+Em resumo, um workflow funciona como um roteiro automatizado que orienta o GitHub sobre quais tarefas devem ser executadas e em qual ordem. Essa padronização reduz o trabalho manual, aumenta a confiabilidade das verificações e contribui para um processo de desenvolvimento mais organizado, seguro e eficiente. Além de permitir que os desenvolvedores concentrem seus esforços na evolução do software, e não na execução de tarefas repetitivas.
+
 
 ## 🛠️ Como rodar o projeto localmente
 
