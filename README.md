@@ -259,7 +259,9 @@ Quando os testes falham dentro de um **pull request**, ele ganha uma sinalizaç�
 
 ## 💻 Tecnologias Utilizadas
 
-_(integrante 6)_
+Nos últimos anos, houve uma grande mudança na estratégia das empresas de tecnologia. Na década passada, era comum o mercado adotar ferramentas isoladas para resolver problemas específicos. Hoje, a tendência é a criação de ecossistemas integrados que centralizam processos. Isso reduz a complexidade de gerenciar inúmeras credenciais e simplifica a análise de logs, eliminando a necessidade de lidar com múltiplas plataformas.
+
+O GitHub reflete exatamente essa evolução: o que antes era apenas um repositório de código, hoje se consolidou como uma plataforma de desenvolvimento completa (Developer Platform) graças à integração de diversas tecnologias. Abaixo estão listadas as principais tecnologias que sustentam o funcionamento do GitHub Actions.
 
 ## 📝 Conclusão
 
