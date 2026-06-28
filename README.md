@@ -288,6 +288,15 @@ Os Runners são as máquinas que realmente executam o código dos seus fluxos de
 - **Windows Server** — para projetos que dependem do ecossistema .NET legado ou ferramentas específicas da Microsoft.
 - **macOS** — fundamental para quem compila aplicativos iOS (Swift/Objective-C) ou utilitários para Mac.
 
+### 4. JavaScript / TypeScript (Node.js)
+ 
+<p align=center style="margin-top:1em;margin-bottom:1em;">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+</p>
+Se você for criar uma Action personalizada para disponibilizar no Marketplace do GitHub, a tecnologia padrão recomendada para desenvolvimento dessas extensões é o Node.js (JavaScript/TypeScript). O GitHub fornece kits de desenvolvimento (SDKs) oficiais focados em Node.js para interagir com as APIs deles.
+
 ## 📝 Conclusão
 
 O GitHub Actions representa uma evolução significativa na forma como equipes de desenvolvimento organizam e automatizam seus processos. Ao longo deste projeto, exploramos como essa ferramenta permite configurar pipelines de CI/CD diretamente no repositório, eliminando a dependência de plataformas externas e simplificando o fluxo de trabalho.
