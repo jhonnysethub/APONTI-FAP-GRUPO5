@@ -205,7 +205,55 @@ _(integrante 4)_
 
 ## 🧪 Estrutura dos Testes
 
-_(integrante 5)_
+A execução dos testes em um evento do GitHub Actions ocorre de forma isolada e automatizada a partir de um runner (um container, geralmente Linux Ubuntu) na nuvem. Sempre que ocorre um evento, como o **push** ou **pull request**, por exemplo, o GitHub cria um ambiente novo e executa a pipeline de testes definida no arquivo *YAML*. A seguir, um exemplo de arquivo *YAML* para executar testes em Node.js nos eventos de push ou pull request.
+
+```yaml
+name: Testes Automatizados
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  teste-exemplo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar Código do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+    
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Executar Testes
+        run: npm test
+```
+
+Quando um **push** passa com sucesso nos testes, o workflow é finalizado com o status <span style="color:#1a7f37;">verde de sucesso</span>, ou seja, as validações automáticas foram validadas e o código está pronto para o próximo passo do ciclo da entrega. Quando um push falha nos testes, o workflow é marcado com o status de <span style="color:#d1242f;">falha vermelho</span>, o código é aceito no repositório, mas as verificações de status são reprovadas, emitindo notificações sobre essas falhas (geralmente por email). Caso exista uma proteção de branch principal configurada (main ou master), a integração do push ao repositório é bloqueada.
+
+<p align=center style="margin-top:3em;">
+  <img src="https://i.ibb.co/tM0tfT0C/teste-passou.png" alt="Testes passaram"></p>
+<p align="center" style="margin-top:-1em;font-style:italic;">Testes passaram com sucesso.</p>
+
+<p align=center style="margin-top:3em;">
+  <img src="https://i.ibb.co/KzDVYSGT/teste-erro.png" alt="Testes falharam">
+</p>
+<p align="center" style="margin-top:-1em;margin-bottom:2em;font-style:italic;">Testes falharam.</p>
+
+Quando os testes falham dentro de um **pull request**, ele ganha uma sinalização vermelha explícita, alertando a equipe a impedir que o código com erro seja integrado ao projeto. O GitHub exibe um *X* vermelho ao lado do nome do teste que falhou, junto com o botão *Details* que leva direto para a linha de log onde o erro aconteceu. Caso exista uma proteção de branch ativa, o botão *Merge Pull Request* fica cinza e bloqueado, impedindo que qualquer desenvolvedor envie bug para a branch principal.
+
+<p align=center style="margin-top:3em;">
+  <img src="https://i.ibb.co/tPbKqwfp/pull-request-erro.png" alt="Testes falharam no PR">
+</p>
+<p align="center" style="margin-top:-1em;margin-bottom:2em;font-style:italic;">Testes falharam no Pull Request.</p>
 
 ## 💻 Tecnologias Utilizadas
 
