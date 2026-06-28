@@ -152,7 +152,6 @@ O GitHub Actions oferece diversas vantagens para equipes de desenvolvimento, pri
 
 ---
 
-
 ## 🚀 Funcionalidades do Workflow
 
 Depois que o GitHub Actions é configurado, o **workflow** passa a ser responsável por executar automaticamente as tarefas definidas para o projeto. Podemos imaginá-lo como um roteiro de execução: em vez de uma pessoa precisar lembrar e realizar cada etapa manualmente, o GitHub segue uma sequência de instruções previamente organizada pelos desenvolvedores.
@@ -204,7 +203,6 @@ Assim como acontece ao seguir uma receita de bolo, não faz sentido decorar o bo
 
 Em resumo, um workflow funciona como um roteiro automatizado que orienta o GitHub sobre quais tarefas devem ser executadas e em qual ordem. Essa padronização reduz o trabalho manual, aumenta a confiabilidade das verificações e contribui para um processo de desenvolvimento mais organizado, seguro e eficiente. Além de permitir que os desenvolvedores concentrem seus esforços na evolução do software, e não na execução de tarefas repetitivas.
 
-
 ## 🛠️ Como rodar o projeto localmente
 
 _(integrante 4)_
@@ -224,7 +222,6 @@ on:
 
 jobs:
   teste-exemplo:
-
     runs-on: ubuntu-latest
 
     steps:
